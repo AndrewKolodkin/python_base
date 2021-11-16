@@ -21,3 +21,4 @@ klass_generator = gen_klass()
 for i in klass_generator:
     print(i)
 print(type(gen_klass()))
+print('*'* 100)
