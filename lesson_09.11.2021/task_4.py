@@ -1,0 +1,10 @@
+# Представлен список чисел. Определить элементы списка, не имеющие повторений.
+# Сформировать из этих элементов список с сохранением порядка их следования в исходном списке.
+import random
+
+src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+list_num_1 = (elem for elem in src)
+list_num_2 = (elem for elem in src)
+next(list_num_2)
+result = (el for el_1, el in zip(list_num_1, list_num_2) if el_1 < el)
+print('result =', *result)
