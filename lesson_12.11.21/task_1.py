@@ -10,8 +10,8 @@ with open('nginx_logs.txt', 'r+') as f:
     for line in f:
         # print(line)
         ln = line.split()
-        # print(ln)
-        res.append(ln[0])
-        res.append(ln[5].strip('"'))
-        res.append(ln[5])
-print(res)
+        print(ln)
+#         res.append(ln[0])
+#         res.append(ln[5].strip('"'))
+#         res.append(ln[5])
+# print(res)
