@@ -1,11 +1,12 @@
 res = []
-with open('nginx_logs.txt', 'r', decode='utf-8') as f:
+with open('nginx_logs.txt', 'r', encoding='utf-8') as f:
     for line in f:
-        print(line)
-        ln = line.split()
-        print(ln)
-
-#         res.append(ln[0])
-#         res.append(ln[5].strip('"'))
-#         res.append(ln[6])
-# print(res)
+        element = [line[:line.index('-') - 1]]
+        line = line[line.index('"') + 1:]
+        element.append(line[:line.index(' ')])
+        element.append(line[line.index('/'):line.index('H') - 1])
+        res.append(tuple(element))
+print('[')
+for el in res:
+    print(el, end=',\n')
+print(']')
