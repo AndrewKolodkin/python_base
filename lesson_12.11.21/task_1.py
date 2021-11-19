@@ -1,5 +1,5 @@
 res = []
-with open('../data/nginx_logs.txt', 'r', encoding='utf-8') as f:
+with open('data/nginx_logs.txt', 'r', encoding='utf-8') as f:
     for line in f:
         element = [line[:line.index('-') - 1]]
         line = line[line.index('"') + 1:]

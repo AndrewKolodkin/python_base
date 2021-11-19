@@ -26,7 +26,7 @@ with open('data/users.csv', 'r', encoding='utf-8') as f1, open('data/hobby.csv',
         if not line2:
             line2 = None
         if line1 not in r_dict:
-            r_dict[line1.strip()]=line2
+            r_dict[line1.strip()] = line2
     content = f2.read()
     if content:
         sys.exit()
