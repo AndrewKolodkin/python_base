@@ -7,8 +7,9 @@ def email_parse(email_address):
     if re.match(pattern, email_address) is not None:
         print('Проверка пройдена')
     else:
-        raise ValueError(f'Error, {email_address} not valid')
+        print(f'Error, {email_address} not valid')
     return email_address
 
 
 print(email_parse('Koloandrew2012@gmail.com'))
+print(email_parse('Koloandrew2012@@mail.com'))
